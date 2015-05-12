@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * Strategery-Deny - Magento Extension
+ *
+ * @copyright Copyright (c) 2015 DwDesigner Inc. (http://www.dwdeveloper.com/)
+ * @author Damian A. Pastorini - damian.pastorini@dwdeveloper.com
+ *
+ */
+-->
+<config>
+    <modules>
+        <Strategery_Deny>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Strategery_Deny>
+    </modules>
+</config>

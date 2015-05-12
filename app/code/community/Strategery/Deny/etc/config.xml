@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * Strategery-Deny - Magento Extension
+ *
+ * @copyright Copyright (c) 2015 DwDesigner Inc. (http://www.dwdeveloper.com/)
+ * @author Damian A. Pastorini - damian.pastorini@dwdeveloper.com
+ *
+ */
+-->
+<config>
+    <modules>
+        <Strategery_Deny>
+            <version>0.1.0</version>
+        </Strategery_Deny>
+    </modules>
+    <global>
+        <models>
+            <strategery_deny>
+                <class>Strategery_Deny_Model</class>
+                <resourceModel>strategery_deny_resource</resourceModel>
+            </strategery_deny>
+        </models>
+        <helpers>
+            <strategery_deny>
+                <class>Strategery_Deny_Helper</class>
+            </strategery_deny>
+        </helpers>
+    </global>
+    <default>
+        <strategery_deny>
+            <general>
+                <enabled>0</enabled>
+            </general>
+        </strategery_deny>
+    </default>
+    <frontend>
+        <routers>
+            <strategery_deny>
+                <use>standard</use>
+                <args>
+                    <module>Strategery_Deny</module>
+                    <frontName>frontaccess</frontName>
+                </args>
+            </strategery_deny>
+        </routers>
+        <layout>
+            <updates>
+                <strategery_deny>
+                    <file>strategery_deny.xml</file>
+                </strategery_deny>
+            </updates>
+        </layout>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <strategery_deny>
+                        <class>Strategery_Deny_Model_Observer</class>
+                        <method>requireLogin</method>
+                    </strategery_deny>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </frontend>
+</config>

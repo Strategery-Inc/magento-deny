@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * Strategery-Deny - Magento Extension
+ *
+ * @copyright Copyright (c) 2015 DwDesigner Inc. (http://www.dwdeveloper.com/)
+ * @author Damian A. Pastorini - damian.pastorini@dwdeveloper.com
+ *
+ */
+-->
+<layout version="0.1.0">
+
+    <strategery_deny_login_index>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>strategery/deny/login.phtml</template>
+            </action>
+        </reference>
+    </strategery_deny_login_index>
+
+</layout>
